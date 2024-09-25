@@ -1,0 +1,360 @@
+/* 
+----- © Copyright wrseno ----- 
+ YT : Sen Tutorial 
+ IG : wrzeno_
+ 
+*/
+
+:root {
+    --blue: #2C2546;
+    --dark-blue: #1B1535;
+    --green: #000000;
+    --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tahoma';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+button {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.header {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    font-size: 15pt;
+    background-color: var(--blue);
+    z-index: 999;
+}
+
+.title {
+    color: var(--green);
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--green);
+    font-size: 11pt;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid var(--white);
+}
+
+li.active a {
+    color: var(--white);
+}
+
+.menu {
+    transition: .5s;
+}
+
+.swiper {
+    width: 70%;
+    margin-top: 6rem;
+}
+
+.swiper-slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.list__harga {
+    color: var(--white);
+}
+
+.title-p,
+.title-v,
+.title-s {
+    margin-top: 2rem;
+    margin-bottom: 10px;
+}
+
+.populer,
+.streaming,
+.voucher {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.populer img,
+.streaming img,
+.voucher img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.link a {
+    color: var(--white);
+}
+
+.link a:hover {
+    color: var(--green);
+    transition-duration: .3s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: var(--dark-blue);
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: var(--white);
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.content {
+    width: 100%;
+}
+
+.harga {
+    color: var(--green);
+}
+
+.pesan {
+    color: var(--blue);
+    background-color: var(--green);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.pesan:hover {
+    color: var(--green);
+    background-color: var(--blue);
+    transition: ease-in .3s;
+}
+
+.pesan img {
+    margin-top: 30px;
+    width: 20px;
+}
+
+.card {
+    background-color: var(--blue);
+    padding: 5%;
+    border-radius: 10px;
+    box-shadow: 20px 20px black;
+}
+
+.card h1 {
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    justify-content: center;
+    background-color: var(--blue);
+    margin-top: 10%;
+    padding: 2%;
+    text-align: center;
+}
+
+.sosmed img {
+    width: 30px;
+    margin: 0 auto;
+}
+
+.copyright {
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* RESPONSIVE WEB DI HANDPHONE */
+@media screen and (max-width:640px) {
+    .container {
+        max-width: 640px;
+        padding: 1rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    button {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--blue);
+        padding: 2rem;
+        width: 15rem;
+        height: 10rem;
+        border-radius: 10px;
+    }
+
+    .hamburger-menu {
+        border: none;
+        background-color: transparent;
+        position: relative;
+        z-index: 999;
+    }
+
+    .hamburger-menu:hover {
+        cursor: pointer;
+    }
+
+    .hamburger-menu>span:nth-child(1) {
+        width: 25px;
+        height: 2px;
+        background: var(--white);
+        display: block;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    .hamburger-menu>span:nth-child(2) {
+        width: 15px;
+        height: 2px;
+        background: var(--green);
+        display: block;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    .hamburger-menu>span:nth-child(3) {
+        width: 25px;
+        height: 2px;
+        background: var(--white);
+        display: block;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    .hamburger-active>span {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-active>span:nth-child(2) {
+        display: none;
+    }
+
+
+    .swiper {
+        width: 90%;
+    }
+
+    .populer,
+    .streaming,
+    .voucher {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        font-weight: bold;
+    }
+
+    .popup {
+        width: 90%;
+    }
+
+    .copyright {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sosmed {
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+}
